@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { ProjectCard } from "./project-card";
 
 export default function App() {
   const contactMeHandler = () => {
@@ -37,21 +38,7 @@ export default function App() {
       grown into a professional expertise in crafting high-quality digital
       experiences. With a strong foundation in modern JavaScript frameworks such
       as React and React Native, I specialize in building scalable, responsive,
-      and visually appealing applications for both web and mobile platforms. In
-      the web domain, I have developed applications that prioritize performance
-      and accessibility, ensuring inclusivity and seamless interaction across
-      devices. My expertise includes TypeScript for type-safe coding, Material
-      UI for design consistency, and robust testing practices with tools like
-      Jest and Playwright. On the mobile side, I leverage React Native to
-      develop cross-platform apps that deliver native-like performance and user
-      experiences. My technical toolkit also extends to backend integration,
-      ensuring seamless communication between frontends and APIs. I thrive in
-      Agile environments, where collaboration and iterative development drive
-      success. Additionally, I am passionate about solving challenging problems,
-      from implementing advanced OCR technology for data extraction to designing
-      modular architectures for scalable projects. As a developer, I am
-      continuously learning and evolving, driven by a commitment to delivering
-      impactful software solutions that enhance users lives.
+      and visually appealing applications for both web and mobile platforms.
     </Text>
   );
   return (
@@ -76,6 +63,46 @@ export default function App() {
             <Button title="Contact me" onPress={contactMeHandler} />
             <>{aboutMe()}</>
           </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Text
+              style={{
+                fontWeight: "bold",
+                fontSize: 20,
+                color: "dimgray",
+                marginTop: 10,
+              }}
+            >
+              My Projects
+            </Text>
+          </View>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{ gap: 10, padding: 10 }}
+          >
+            <ProjectCard
+              name="Apple Cards"
+              image={require("./assets/projects/project1.jpeg")}
+            />
+            <ProjectCard
+              name="Local First"
+              image={require("./assets/projects/project2.jpeg")}
+            />
+            <ProjectCard
+              name="Flappy Bird"
+              image={require("./assets/projects/project3.jpeg")}
+            />
+            <ProjectCard
+              name="Todo App"
+              image={require("./assets/projects/project4.jpeg")}
+            />
+          </ScrollView>
         </ScrollView>
       </SafeAreaView>
     </SafeAreaProvider>
