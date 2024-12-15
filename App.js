@@ -14,7 +14,7 @@ export default function App() {
       <SafeAreaView edges={["bottom"]}>
         <ScrollView>
           <StatusBar style="light" />
-          <View>
+          <View style={styles.container}>
             <Image
               source={{
                 uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/pinterest/0.jpeg",
@@ -34,21 +34,31 @@ export default function App() {
             </View>
             <Button title="Contact me" onPress={contactMeHandler} />
 
-            <Text style={{ fontSize: 28, lineHeight: 35 }}>
-              In this case, we will see that the content no longer fits on the
-              screen. By default, React Native views are not scrollable. To make
-              the scrollable, we can use a component, imported from
-              `react-native`. This component is very similar to a normal `, with
-              the benefit of making the content inside scrollable. It can be
-              either a vertical scroll or even a horizontal scroll. Let’s import
-              it and wrap our root container inside the ScrollView In this case,
-              we will see that the content no longer fits on the screen. By
-              default, React Native views are not scrollable. To make the
-              scrollable, we can use component, imported from `react-native`.
-              This component is very similar to a normal `, with the benefit of
-              making the content inside scrollable. It can be either a vertical
-              scroll or even a horizontal scroll. Let’s import it and wrap our
-              root container inside the ScrollView
+            <Text style={{ fontSize: 18, lineHeight: 35, padding: 10 }}>
+              I am a passionate software engineer with a dynamic career in both
+              mobile and web app development. My journey in technology began
+              with a deep interest in creating intuitive and accessible user
+              interfaces, which has grown into a professional expertise in
+              crafting high-quality digital experiences. With a strong
+              foundation in modern JavaScript frameworks such as React and React
+              Native, I specialize in building scalable, responsive, and
+              visually appealing applications for both web and mobile platforms.
+              In the web domain, I have developed applications that prioritize
+              performance and accessibility, ensuring inclusivity and seamless
+              interaction across devices. My expertise includes TypeScript for
+              type-safe coding, Material UI for design consistency, and robust
+              testing practices with tools like Jest and Playwright. On the
+              mobile side, I leverage React Native to develop cross-platform
+              apps that deliver native-like performance and user experiences. My
+              technical toolkit also extends to backend integration, ensuring
+              seamless communication between frontends and APIs. I thrive in
+              Agile environments, where collaboration and iterative development
+              drive success. Additionally, I’m passionate about solving
+              challenging problems, from implementing advanced OCR technology
+              for data extraction to designing modular architectures for
+              scalable projects. As a developer, I am continuously learning and
+              evolving, driven by a commitment to delivering impactful software
+              solutions that enhance users' lives.
             </Text>
           </View>
         </ScrollView>

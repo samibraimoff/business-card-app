@@ -1,12 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  //   container: {
-  //     flex: 1,
-  //     backgroundColor: "#fff",
-  //     alignItems: "center",
-  //     justifyContent: "center",
-  //   },
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   imageContainer: {
     width: "100%",
     aspectRatio: 16 / 9,
@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
     marginTop: -75,
   },
   text: {
+    marginTop: 10,
     fontSize: 20,
     fontWeight: "bold",
   },
@@ -27,9 +28,10 @@ export const styles = StyleSheet.create({
     fontSize: 18,
   },
   iconsContainer: {
-    marginTop: 20,
+    marginTop: 12,
     flexDirection: "row",
     justifyContent: "space-around",
     gap: 20,
+    marginBottom: 12,
   },
 });
