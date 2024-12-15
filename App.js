@@ -1,5 +1,5 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
+import { styles } from "./styles";
 
 export default function App() {
   return (
@@ -19,31 +19,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  imageContainer: {
-    width: "100%",
-    aspectRatio: 16 / 9,
-  },
-  profileImage: {
-    width: 150,
-    height: 150,
-    borderRadius: 150,
-    borderColor: "white",
-    borderWidth: 5,
-    marginTop: -75,
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  paragraph: {
-    fontSize: 18,
-  },
-});
