@@ -1,5 +1,6 @@
 import { Text, View, Image, ScrollView, Button, Linking } from "react-native";
 import { styles } from "./styles";
+import { StatusBar } from "expo-status-bar";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
@@ -12,6 +13,7 @@ export default function App() {
     <SafeAreaProvider>
       <SafeAreaView edges={["bottom"]}>
         <ScrollView>
+          <StatusBar style="light" />
           <View>
             <Image
               source={{
