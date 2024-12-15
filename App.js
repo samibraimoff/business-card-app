@@ -1,9 +1,12 @@
-import { Text, View, Image, ScrollView } from "react-native";
+import { Text, View, Image, ScrollView, Button, Linking } from "react-native";
 import { styles } from "./styles";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 export default function App() {
+  const contactMeHandler = () => {
+    Linking.openURL("mailto:sandibek@gmail.com");
+  };
   return (
     <ScrollView>
       <View style={{ padding: 10 }}>
@@ -39,6 +42,7 @@ export default function App() {
           either a vertical scroll or even a horizontal scroll. Let’s import it
           and wrap our root container inside the ScrollView
         </Text>
+        <Button title="Contact me" onPress={contactMeHandler} />
       </View>
     </ScrollView>
   );
